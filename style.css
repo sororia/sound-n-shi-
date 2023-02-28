@@ -1,0 +1,184 @@
+body{
+	font-family:Futura;
+	color:black;
+	background: linear-gradient(#FF00FF, blue);
+  font-size:20pt;
+}
+
+
+
+section{
+	background-color:white;
+	padding:1%;
+	margin:1%;
+}
+
+section.flexible{
+	display:flex;
+}
+
+article.principal{
+	width:90%;
+}
+
+article.gauche{
+	min-width:0%;
+	max-width:0%;
+}
+
+article{
+	background-color:white;
+	padding:2%;
+	margin:1%;
+}
+
+h1{
+	text-align:start;
+	font-size:80pt;
+}
+
+h2{
+	font-family:Futura;
+	font-size:60pt;
+}
+
+p{
+	font-size:50spt;
+}
+
+/*N’oubliez pas : quand on donne 4 dimensions autour d’un objet, elles doivent être dans l’ordre suivant :
+haut, droite, bas, gauche*/
+table{
+margin:1% 0% 1% 5%;
+border: 2px solid red; /*pour les bordures extérieures, code que vous pouvez personnaliser*/
+border-collapse: collapse; /*facultatif : si vous voulez fusionner les bordures extérieures et intérieures*/
+}
+
+td{
+border: 1px dotted black; /* pour les bordures intérieures, code que vous pouvez personnaliser*/
+padding: 5px 10px 5px 10px; /*pour espacer la bordure du texte : 5px d’espace en haut et en bas des cellules,
+10px de chaque côté*/
+font-style:italic;
+text-align:start;
+}
+
+li{
+font-style:italic;
+}
+
+ul{
+list-style-type:square;
+}
+
+ol{
+list-style-type:lower-alpha;
+}
+
+.positionimage{
+	text-align:center;
+}
+
+.attention{
+	background-color:#fff8dc;
+	text-align:start;
+	font-weight:bold;
+	font-style:italic;
+}
+#menu {
+	background: #0099CC;
+	color: #FFF;
+	height: 45px;
+	padding-left: 18px;
+	border-radius: 10px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #0099CC;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261";
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+img {
+width : 400px;
+height : 400px;
+}
